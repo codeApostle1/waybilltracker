@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item History</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="inventory.html">Inventory</a>
+    </nav>
+  </header>
+
+  <h1>Item History</h1>
+  <table id="historyTable">
+    <thead>
+      <tr>
+        <th>Waybill</th>
+        <th>Date Ordered</th>
+        <th>Date Received</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+<!-- Inventory List -->
+<ul id="inventoryList" class="inventory-list">
+  <!-- Items will be dynamically added here -->
+</ul>
+
+<!-- Modal -->
+<div id="historyModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h2 id="modalItemName">Item Name</h2>
+    <ul id="historyList"></ul>
+  </div>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>
