@@ -6,41 +6,53 @@
   <title>Orders (Wait-List)</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style = 'background-color: var(--bg)'>
   <header>
     <nav>
-      <a href="index.html">Dashboard</a>
-      <a href="inventory.html">Main Inventory</a>
+      <a href="index.html">Home</a>|
+      <a href="inventory.html">Main Inventory</a>|
+      <a href="history.html">History</a>
     </nav>
   </header>
 
-  <h1>Orders (Wait-List)</h1>
+  <h1 class="order-title">Orders</h1>
+  
+  <p class="order-text">Ensure to add the right waybill number</p>
 
   <!-- Order Form -->
   <form id="orderForm">
-    <label>Waybill Number:</label>
-    <input type="text" id="waybill" required><br>
+    <label for="waybill">Waybill Number:
+    <input type="text" id="waybill" required>
+    </label>
 
-    <label>Confirm Waybill:</label>
-    <input type="text" id="confirmWaybill" required><br>
+    <label for="confirmWaybill">Confirm Waybill:
+    <input type="text" id="confirmWaybill" required>
+    </label>
 
-    <label>Date:</label>
-    <input type="date" id="date" required><br>
+    <label for="date">Date:
+    <input type="date" id="date" required>
+    </label>
 
-    <label>Item:</label>
-    <select id="itemName"></select><br>
+    <label for="itemName">Item:
+    <select id="itemName"></select>
+    </label>
 
-    <label>Quantity:</label>
-    <input type="number" id="quantity" required><br>
+    <label for="quantity">Quantity:
+    <input type="number" id="quantity" required>
+    </label>
 
-    <label>Price (optional):</label>
-    <input type="number" id="price"><br>
+    <label for="price">Price (optional):
+    <input type="number" id="price">
+    </label>
 
     <button type="submit">Add to Wait-List</button>
   </form>
 
   <!-- Wait-List Table -->
   <table id="waitlistTable">
+    <h2 class="wl-title">Wait-List</h2>
+    
+    <p class="wl-text">items recieved on system appear here</p>
     <thead>
       <tr>
         <th>Waybill</th>
@@ -52,9 +64,14 @@
     <tbody></tbody>
   </table>
   
+  <section class="arival">
+    
+
   <h2>Confirm Arrival</h2>
-<input type="text" id="arrivalWaybill" placeholder="Enter Waybill Number">
-<button id="confirmArrivalBtn">Confirm Arrival</button>
+  <p class="wl-text">ensure you confirm the right invoice, and its recieved in your store</p>
+<input type="text" class="arival-input" id="arrivalWaybill" placeholder="Enter Waybill Number">
+<button class="arival-btn" id="confirmArrivalBtn">Confirm Arrival</button>
+  </section>
 
   <script src="app.js"></script>
 </body>
